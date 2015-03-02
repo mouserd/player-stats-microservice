@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      #naming_strategy: org.hibernate.cfg.EJB3NamingStrategy #Camel-case JPA naming
+  datasource:
+    url: jdbc:mysql://localhost/player-stats-service
+    username: playerstats_user
+    password: abc123
+    driver-class-name: com.mysql.jdbc.Driver
