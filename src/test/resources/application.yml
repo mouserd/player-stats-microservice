@@ -1,9 +1,10 @@
 spring:
   jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
     show-sql: true
     hibernate:
       ddl-auto: create-drop
   datasource:
-    url: jdbc:hsqldb:file:testedb
+    url: jdbc:hsqldb:file:player-statsdb
     username: sa
     driver-class-name: com.mysql.jdbc.Driver
