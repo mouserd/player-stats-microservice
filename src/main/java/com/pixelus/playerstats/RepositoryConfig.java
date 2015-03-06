@@ -1,6 +1,6 @@
-package com.pixelus.repository.config;
+package com.pixelus.playerstats;
 
-import com.pixelus.playerstats.PlayerStats;
+import com.pixelus.playerstats.model.PlayerStats;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;

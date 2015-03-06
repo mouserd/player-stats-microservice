@@ -1,4 +1,4 @@
-package com.pixelus.playerstats;
+package com.pixelus.playerstats.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
