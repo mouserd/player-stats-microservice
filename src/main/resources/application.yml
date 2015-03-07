@@ -9,12 +9,21 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
+hystrix:
+  enabled: true
+  streamEnabled: true
+  streamUrl: /hystrix.stream
+  stream:
+    bus:
+      enabled: true
+      sendRate: 600
+
 spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
       #naming_strategy: org.hibernate.cfg.EJB3NamingStrategy #Camel-case JPA naming
   datasource:
     url: jdbc:mysql://localhost/player-stats-service

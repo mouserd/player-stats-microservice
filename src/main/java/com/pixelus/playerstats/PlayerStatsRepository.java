@@ -1,5 +1,6 @@
 package com.pixelus.playerstats;
 
+import com.pixelus.playerstats.model.PlayerStats;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
