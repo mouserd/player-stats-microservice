@@ -9,5 +9,5 @@ EXPOSE 3306
 CMD ["/usr/bin/mysqld_safe"]
 
 EXPOSE 8081
-CMD java -jar player-stats-microservice.jar
+CMD java -jar /data/player-stats-microservice.jar
 ADD build/player-stats-microservice.jar /data/player-stats-microservice.jar
