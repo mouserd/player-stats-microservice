@@ -2,12 +2,14 @@ info:
   component: Player Stats (Local Properties)
 
 server:
-  port: 8081
+  port: ${PORT:8081}
 
 eureka:
+  instance:
+    preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
 
 hystrix:
   enabled: true
@@ -26,7 +28,16 @@ spring:
       ddl-auto: create
       #naming_strategy: org.hibernate.cfg.EJB3NamingStrategy #Camel-case JPA naming
   datasource:
-    url: jdbc:mysql://localhost/player-stats-service
+    url: ${DATASOURCE_URI:jdbc:mysql://localhost/player-stats-service}
     username: playerstats_user
     password: abc123
     driver-class-name: com.mysql.jdbc.Driver
+
+---
+
+spring:
+  profiles: cloud
+
+eureka:
+  instance:
+    preferIpAddress: false
